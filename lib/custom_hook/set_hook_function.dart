@@ -15,7 +15,6 @@ class SetController<T> extends ChangeNotifier {
     } else {
       add(val);
     }
-    notifyListeners();
   }
 
   remove(T val) {
@@ -29,5 +28,5 @@ class SetController<T> extends ChangeNotifier {
 }
 
 SetController useSetHook<T>() {
-  return useListenable(SetController<T>());
+  return useListenable( useMemoized(()=>SetController<T>()) );
 }

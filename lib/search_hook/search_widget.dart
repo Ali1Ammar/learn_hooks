@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:learn_hooks/search_hook/fake_repo.dart';
 
@@ -26,6 +25,7 @@ class SearchWidgetExample extends HookWidget {
       searchEnable.addListener(onChange);
       return () => searchEnable.removeListener(onChange);
     }, const []);
+  
     final searchResult =
         useMemoized(() => repo.search(controller.text), [controller.text]);
 
@@ -71,7 +71,6 @@ class SearchWidgetExample extends HookWidget {
                 },
               ),
             ),
-          if (focusNode.hasFocus) Text("Keyboard")
         ],
       ),
     );

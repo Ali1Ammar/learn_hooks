@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -12,15 +14,21 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends State<HomeWidget>
     with SingleTickerProviderStateMixin {
-//      
-  late AnimationController _controller;
+      
   late TextEditingController _controllerText;
-
+  late AnimationController _controller;
+  // late StreamSubscription streamSub;
+  // late String streamValue;
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this, duration: widget.duration);
     _controllerText = TextEditingController(text: widget.initText);
+    // streamSub = Stream.periodic(const Duration(seconds: 1)).listen((event) {
+    //   setState(() {
+    //     streamValue = event;
+    //   });
+    // });
   }
 
   @override
@@ -38,6 +46,7 @@ class _HomeWidgetState extends State<HomeWidget>
   void dispose() {
     _controller.dispose();
     _controllerText.dispose();
+    // streamSub.cancel();
     super.dispose();
   }
 

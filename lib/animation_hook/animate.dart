@@ -16,6 +16,7 @@ class SplashScreen extends HookWidget {
         Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero)
             .animate(controller));
 
+
     useEffect(() {
       controller.repeat(reverse: true);
 

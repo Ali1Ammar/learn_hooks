@@ -11,7 +11,7 @@ class HomeWidget extends HookWidget {
   Widget build(BuildContext context) {
     final controller = useAnimationController(duration: duration);
     final controllerText = useTextEditingController(text: initText);
-  
+
     return Scaffold(
       body: ListView(
         children: [

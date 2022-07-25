@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_hooks/animation_hook/animate.dart';
+import 'package:learn_hooks/basic/onee.dart';
+import 'package:learn_hooks/custom_hook/nohook.dart';
 import 'package:learn_hooks/custom_hook/todo_page.dart';
 import 'package:learn_hooks/example/app.dart' as noHook;
 import 'package:learn_hooks/example/with_hook.dart' as useHook;
@@ -24,21 +26,23 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: 
-      SearchWidgetExample()??
+      // Example2()
+      // TODONoHook()??
+      // SearchWidgetExample()??
       // TodoPage()??
-      // TodoPage2()??
-      // SplashScreen() ??
+      TodoPage2()??
+      SplashScreen() 
       //     LearnApp() ??
 
         //   noHook.HomeWidget(
         //     duration: Duration(seconds: 1),
         //     initText: "ok this is the text",
         //   ) 
-        //  ??
-          useHook.HomeWidget(
-            duration: Duration(seconds: 1),
-            initText: "ok this is the text",
-          ),
+        // //  ??
+        //   useHook.HomeWidget(
+        //     duration: Duration(seconds: 1),
+        //     initText: "ok this is the text",
+        //   ),
     );
   }
 }
